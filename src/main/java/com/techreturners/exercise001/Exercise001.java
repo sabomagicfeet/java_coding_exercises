@@ -1,5 +1,7 @@
 package com.techreturners.exercise001;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 public class Exercise001 {
@@ -26,16 +28,42 @@ public class Exercise001 {
 
     public double addVat(double originalPrice, double vatRate) {
         // Add your code here
-        return 0.0;
+        double price = originalPrice + (originalPrice * vatRate / 100);
+
+        BigDecimal bigDecimal = BigDecimal.valueOf(price);
+        bigDecimal = bigDecimal.setScale(2, RoundingMode.HALF_UP);
+
+        price = bigDecimal.doubleValue();
+
+        System.out.println(price);
+
+        return price;
     }
 
     public String reverse(String sentence) {
         // Add your code here
-        return "";
+        String reverseSentence = "";
+
+        for(int i = sentence.length() - 1; i >= 0; i--){
+            reverseSentence += String.valueOf(sentence.charAt(i));
+        }
+
+        System.out.println(reverseSentence);
+
+        return reverseSentence;
     }
 
     public int countLinuxUsers(List<User> users) {
         // Add your code here
-        return 0;
+        int count = 0;
+
+        for(int i = 0; i < users.size(); i++){
+            if(users.get(i).getType() == "Linux"){
+                count++;
+            }
+        }
+        System.out.println(count);
+        return count;
     }
 }
+
