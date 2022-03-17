@@ -5,8 +5,12 @@ import java.util.List;
 public class Exercise001 {
     public String capitalizeWord(String word) {
         // Add your code here
+        String firstLetter = String.valueOf(word.charAt(0));
+        String uppercaseWord = firstLetter.toUpperCase() + word.substring(1);
 
-        return "";
+        System.out.println(uppercaseWord);
+
+        return uppercaseWord;
     }
 
     public String generateInitials(String firstName, String lastName) {
