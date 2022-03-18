@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise003Test {
 
+    //property of the Class
     private Exercise003 ex003;
 
     @Before
