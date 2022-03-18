@@ -6,6 +6,8 @@ import java.util.Locale;
 
 public class Exercise005 {
 
+    private final int ALPHABET_COUNT = 26;
+
     public boolean isPangram(String input) {
 
         HashSet<String> pangramSet = new HashSet<>();
@@ -16,7 +18,7 @@ public class Exercise005 {
             }
         }
 
-        return pangramSet.size() == 26;
+        return pangramSet.size() == ALPHABET_COUNT;
     }
 
 }
