@@ -6,28 +6,14 @@ import java.util.List;
 
 public class Exercise001 {
     public String capitalizeWord(String word) {
-        // Add your code here
-        String firstLetter = String.valueOf(word.charAt(0));
-        String uppercaseWord = firstLetter.toUpperCase() + word.substring(1);
-
-        System.out.println(uppercaseWord);
-
-        return uppercaseWord;
+        return String.valueOf( word.charAt(0) ).toUpperCase() + word.substring(1);
     }
 
     public String generateInitials(String firstName, String lastName) {
-        // Add your code here
-        String firstNameInitial = String.valueOf(firstName.charAt(0));
-        String lastNameInitial = String.valueOf(lastName.charAt(0));
-        String initial = firstNameInitial + "." + lastNameInitial;
-
-        System.out.println(initial);
-
-        return initial;
+        return String.valueOf(firstName.charAt(0)) + "." + String.valueOf(lastName.charAt(0));
     }
 
     public double addVat(double originalPrice, double vatRate) {
-        // Add your code here
         double price = originalPrice + (originalPrice * vatRate / 100);
 
         BigDecimal bigDecimal = BigDecimal.valueOf(price);
@@ -35,26 +21,20 @@ public class Exercise001 {
 
         price = bigDecimal.doubleValue();
 
-        System.out.println(price);
-
         return price;
     }
 
     public String reverse(String sentence) {
-        // Add your code here
         String reverseSentence = "";
 
         for(int i = sentence.length() - 1; i >= 0; i--){
             reverseSentence += String.valueOf(sentence.charAt(i));
         }
 
-        System.out.println(reverseSentence);
-
         return reverseSentence;
     }
 
     public int countLinuxUsers(List<User> users) {
-        // Add your code here
         int count = 0;
 
         for(int i = 0; i < users.size(); i++){
@@ -62,7 +42,7 @@ public class Exercise001 {
                 count++;
             }
         }
-        System.out.println(count);
+
         return count;
     }
 }

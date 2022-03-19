@@ -18,8 +18,7 @@ public class Exercise004 {
     }
 
     public LocalDateTime getDateTime() {
-        LocalDateTime afterGigaSeconds = localDateTime.plusSeconds(GIGASECOND);
-        return afterGigaSeconds;
+        return localDateTime.plusSeconds(GIGASECOND);
     }
 
 }
