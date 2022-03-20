@@ -10,7 +10,7 @@ public class Exercise001 {
     }
 
     public String generateInitials(String firstName, String lastName) {
-        return String.valueOf(firstName.charAt(0)) + "." + String.valueOf(lastName.charAt(0));
+        return firstName.charAt(0) + "." + lastName.charAt(0);
     }
 
     public double addVat(double originalPrice, double vatRate) {
@@ -25,20 +25,20 @@ public class Exercise001 {
     }
 
     public String reverse(String sentence) {
-        String reverseSentence = "";
+        StringBuilder reverseSentence = new StringBuilder();
 
         for(int i = sentence.length() - 1; i >= 0; i--){
-            reverseSentence += String.valueOf(sentence.charAt(i));
+            reverseSentence.append(sentence.charAt(i));
         }
 
-        return reverseSentence;
+        return reverseSentence.toString();
     }
 
     public int countLinuxUsers(List<User> users) {
         int count = 0;
 
-        for(int i = 0; i < users.size(); i++){
-            if(users.get(i).getType() == "Linux"){
+        for (User user : users) {
+            if (user.getType().equals("Linux")) {
                 count++;
             }
         }
