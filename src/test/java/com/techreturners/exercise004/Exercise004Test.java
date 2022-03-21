@@ -1,13 +1,11 @@
 package com.techreturners.exercise004;
 
-import org.junit.Ignore;
-import org.junit.Test;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class Exercise004Test {
 
